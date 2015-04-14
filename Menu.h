@@ -7,7 +7,7 @@ class Menu: public wxMenuBar{
         void OnHello(wxCommandEvent& event);
         void OnExit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
-    public:
+    private:
         wxMenu *FileMenu;
         wxMenu *InfoMenu;
         wxMenu *ToolsMenu;
