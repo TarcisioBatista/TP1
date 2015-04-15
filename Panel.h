@@ -10,13 +10,6 @@ class Panel: public wxPanel{
         void OnTraceLines(wxCommandEvent& event);
         void OnTraceLinesOnClicks(wxCommandEvent& event);
         void OnPencil(wxCommandEvent& event);
-        
-        enum {
-            ID_CHANGEBACKG,
-            ID_TRACELINES,
-            ID_TRACELINESCLICKS,
-            ID_PENCIL
-        };
     
     private:
         
@@ -26,4 +19,11 @@ class Panel: public wxPanel{
         wxButton *Pencil;
         
     DECLARE_EVENT_TABLE();
+};
+
+enum {
+        ID_CHANGEBACKG,
+        ID_TRACELINES,
+        ID_TRACELINESCLICKS,
+        ID_PENCIL
 };

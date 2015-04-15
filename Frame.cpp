@@ -9,19 +9,6 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     CreateStatusBar();
     SetStatusText( "in progress..." );
     
-
-    // connectando eventos da frame aos "handlers" da classe panel
-    /*
-    Connect(ID_CHANGEBACKG, wxEVT_COMMAND_MENU_SELECTED,
-      wxCommandEventHandler(Panel::OnChangeBackGround());
-    Connect(ID_TRACELINES, wxEVT_COMMAND_MENU_SELECTED,
-      wxCommandEventHandler(Panel::OnTraceLines());
-    Connect(ID_TRACELINESCLICKS, wxEVT_COMMAND_MENU_SELECTED,
-      wxCommandEventHandler(Panel::OnTraceLinesOnClicks);
-    Connect(ID_PENCIL, wxEVT_COMMAND_MENU_SELECTED,
-      wxCommandEventHandler(Panel::OnPencil);
-    */
-    
     
     // connectando eventos da frame aos "handlers" da classe menu
     Connect(wxID_EXIT, wxEVT_COMMAND_MENU_SELECTED,

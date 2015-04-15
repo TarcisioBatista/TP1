@@ -11,13 +11,12 @@ BEGIN_EVENT_TABLE(Panel, wxPanel)
 END_EVENT_TABLE()
 
 Panel::Panel(wxWindow *pai):
-    wxPanel (pai, 0, wxPoint(-1,-1), wxSize(80,160)) {
+    wxPanel (pai, 0, wxPoint(-1,-1), wxSize(-1,-1)) {
         
-        
-        MudaFundo = new wxButton(this, ID_CHANGEBACKG, wxT("mudar o fundo"), wxPoint(0,0), wxSize(80,40));
-        TracaLinhas = new wxButton(this, ID_TRACELINES, wxT("mudar o fundo"), wxPoint(0,40), wxSize(80,40));
-        TracalinhaInClicks = new wxButton(this, ID_TRACELINESCLICKS, wxT("mudar o fundo"), wxPoint(0,80), wxSize(80,40));
-        Pencil = new wxButton(this, ID_PENCIL, wxT("mudar o fundo"), wxPoint(0,120), wxSize(80,40));
+        MudaFundo = new wxButton(this, ID_CHANGEBACKG, wxT("Mudar Cor \n do Fundo"), wxPoint(0,0), wxSize(100,40));
+        TracaLinhas = new wxButton(this, ID_TRACELINES, wxT("Tracar Retas"), wxPoint(0,40), wxSize(100,40));
+        TracalinhaInClicks = new wxButton(this, ID_TRACELINESCLICKS, wxT("Tracar Retas \nem cliques"), wxPoint(0,80), wxSize(100,40));
+        Pencil = new wxButton(this, ID_PENCIL, wxT("Pincel"), wxPoint(0,120), wxSize(100,40));
 }
     
 void Panel::OnChangeBackGround(wxCommandEvent& event) {
