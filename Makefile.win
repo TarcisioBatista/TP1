@@ -1,14 +1,14 @@
 # Project: tp1
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ IDE 7.4.2.569 on 15/04/15 09:14
+# Makefile created by wxDev-C++ IDE 7.4.2.569 on 15/04/15 12:38
 
 WXLIBNAME = wxmsw29u
 CPP       = g++.exe
 CC        = gcc.exe
 WINDRES   = "windres.exe"
-OBJ       = Objects/MingW/App.o Objects/MingW/Frame.o Objects/MingW/Menu.o Objects/MingW/Panel.o
-LINKOBJ   = "Objects/MingW/App.o" "Objects/MingW/Frame.o" "Objects/MingW/Menu.o" "Objects/MingW/Panel.o"
+OBJ       = Objects/MingW/App.o Objects/MingW/Frame.o Objects/MingW/Menu.o Objects/MingW/PanelMenu.o
+LINKOBJ   = "Objects/MingW/App.o" "Objects/MingW/Frame.o" "Objects/MingW/Menu.o" "Objects/MingW/PanelMenu.o"
 LIBS      = -L"C:/Program Files/Dev-Cpp/lib/wx/gcc_lib" -L"C:/Program Files/Dev-Cpp/lib" -L"C:/Program Files/Dev-Cpp/MinGW32/lib" -mwindows -l$(WXLIBNAME) -l$(WXLIBNAME)_gl -lwxscintilla -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32  -g3 
 INCS      = -I"C:/Program Files/Dev-Cpp/MinGW32/include"
 CXXINCS   = -I"C:/Program Files/Dev-Cpp/MinGW32/include" -I"C:/Program Files/Dev-Cpp/" -I"C:/Program Files/Dev-Cpp/include/common"
@@ -36,14 +36,14 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
 
-Objects/MingW/App.o: $(GLOBALDEPS) App.cpp App.h Frame.h Menu.h Panel.h
+Objects/MingW/App.o: $(GLOBALDEPS) App.cpp App.h Frame.h Menu.h PanelMenu.h
 	$(CPP) -c App.cpp -o Objects/MingW/App.o $(CXXFLAGS)
 
-Objects/MingW/Frame.o: $(GLOBALDEPS) Frame.cpp Frame.h Menu.h Panel.h
+Objects/MingW/Frame.o: $(GLOBALDEPS) Frame.cpp Frame.h Menu.h PanelMenu.h
 	$(CPP) -c Frame.cpp -o Objects/MingW/Frame.o $(CXXFLAGS)
 
 Objects/MingW/Menu.o: $(GLOBALDEPS) Menu.cpp Menu.h
 	$(CPP) -c Menu.cpp -o Objects/MingW/Menu.o $(CXXFLAGS)
 
-Objects/MingW/Panel.o: $(GLOBALDEPS) Panel.cpp Panel.h
-	$(CPP) -c Panel.cpp -o Objects/MingW/Panel.o $(CXXFLAGS)
+Objects/MingW/PanelMenu.o: $(GLOBALDEPS) PanelMenu.cpp PanelMenu.h
+	$(CPP) -c PanelMenu.cpp -o Objects/MingW/PanelMenu.o $(CXXFLAGS)

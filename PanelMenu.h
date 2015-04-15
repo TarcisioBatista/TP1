@@ -1,15 +1,16 @@
 #include <wx/wx.h>
 #include <wx/panel.h>
 
-class Panel: public wxPanel{
+class PanelMenu: public wxPanel{
     
     public:
         
-        Panel(wxWindow *pai);
+        PanelMenu(wxWindow *pai);
         void OnChangeBackGround(wxCommandEvent& event);
         void OnTraceLines(wxCommandEvent& event);
         void OnTraceLinesOnClicks(wxCommandEvent& event);
         void OnPencil(wxCommandEvent& event);
+        void OnLargura(wxCommandEvent& event);
     
     private:
         
@@ -17,6 +18,7 @@ class Panel: public wxPanel{
         wxButton *TracaLinhas;
         wxButton *TracalinhaInClicks;
         wxButton *Pencil;
+        wxButton *Largura;
         
     DECLARE_EVENT_TABLE();
 };
@@ -25,5 +27,6 @@ enum {
         ID_CHANGEBACKG,
         ID_TRACELINES,
         ID_TRACELINESCLICKS,
-        ID_PENCIL
+        ID_PENCIL,
+        ID_LARGURA
 };

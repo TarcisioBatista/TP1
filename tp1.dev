@@ -147,9 +147,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit8]
-FileName=Panel.cpp
+FileName=PanelMenu.h
 CompileCpp=1
-Folder=
+Folder=tp1
 Compile=1
 Link=1
 Priority=1000
@@ -157,9 +157,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit7]
-FileName=Panel.h
+FileName=PanelMenu.cpp
 CompileCpp=1
-Folder=
+Folder=tp1
 Compile=1
 Link=1
 Priority=1000

@@ -4,7 +4,7 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
         : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
     MenuBar = new Menu();
-    Panel1 = new Panel (this);
+    Panel1 = new PanelMenu(this);
     SetMenuBar(MenuBar);
     CreateStatusBar();
     SetStatusText( "in progress..." );
