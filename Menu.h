@@ -4,7 +4,7 @@ class Menu: public wxMenuBar{
 
     public:
         Menu();
-        void OnHello(wxCommandEvent& event);
+        void OnNovo(wxCommandEvent& event);
         void OnExit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
     private:
@@ -17,5 +17,5 @@ class Menu: public wxMenuBar{
 
 enum
 {
-    ID_HELLO = 1
+    ID_NOVO = 1
 };

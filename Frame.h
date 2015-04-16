@@ -3,6 +3,7 @@
 #include "Menu.h"
 #include "PanelMenu.h"
 #include "PanelCores.h"
+#include "DrawPanel.h"
 
 class MyFrame: public wxFrame
 {
@@ -11,5 +12,6 @@ class MyFrame: public wxFrame
     private:
         Menu *MenuBar;
         PanelMenu *Panel1;
-        PanelCores *Panel3;    
+        PanelCores *Panel3;
+        DrawPanel *Panel2;    
 };

@@ -9,12 +9,11 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     wxPanel *Parent = new wxPanel(this, wxID_ANY);
     Panel1 = new PanelMenu(Parent);
     Panel3 = new PanelCores(Parent);
-    wxPanel *Panel2 = new wxPanel(Parent, 0, wxPoint(100,-1), wxSize(300,-1));
-    Panel2->SetBackgroundColour(wxColour(255,255,255));
+    Panel2 = new DrawPanel(Parent);
     wxBoxSizer *vbox = new wxBoxSizer(wxVERTICAL);
     wxBoxSizer *hbox = new wxBoxSizer(wxHORIZONTAL);
-    hbox->Add(Panel1, 0, wxEXPAND | wxALL, 5);
-    hbox->Add(Panel2, 1, wxEXPAND | wxALL, 5);
+    hbox->Add(Panel1, 0, wxEXPAND | wxRIGHT , 5);
+    hbox->Add(Panel2, 1, wxEXPAND | wxRIGHT , 5);
     vbox->Add(hbox, 1, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, 5);
     vbox->Add(Panel3, 0, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, 5);
     Parent->SetSizer(vbox);
@@ -23,6 +22,7 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     MenuBar = new Menu();
     SetMenuBar(MenuBar);
     CreateStatusBar();
+    Centre();
     SetStatusText( "in progress..." );
     
     
@@ -31,8 +31,8 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     Connect(wxID_EXIT, wxEVT_COMMAND_MENU_SELECTED,
       wxCommandEventHandler(Menu::OnExit));
      
-    Connect(ID_HELLO, wxEVT_COMMAND_MENU_SELECTED,
-      wxCommandEventHandler(Menu::OnHello)); 
+    Connect(ID_NOVO, wxEVT_COMMAND_MENU_SELECTED,
+      wxCommandEventHandler(Menu::OnNovo)); 
       
     Connect(wxID_ABOUT, wxEVT_COMMAND_MENU_SELECTED,
       wxCommandEventHandler(Menu::OnAbout));

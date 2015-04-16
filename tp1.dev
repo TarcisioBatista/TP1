@@ -1,7 +1,7 @@
 [Project]
 FileName=tp1.dev
 Name=tp1
-UnitCount=8
+UnitCount=10
 PchHead=-1
 PchSource=-1
 Ver=3
@@ -68,7 +68,7 @@ ProductName=
 ProductVersion=
 AutoIncBuildNrOnRebuild=0
 AutoIncBuildNrOnCompile=0
-UnitCount=10
+UnitCount=12
 
 [Profile1]
 ProfileName=MingW gcc
@@ -180,6 +180,26 @@ BuildCmd=
 FileName=PanelCores.h
 CompileCpp=1
 Folder=tp1
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit11]
+FileName=DrawPanel.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit12]
+FileName=DrawPanel.cpp
+CompileCpp=1
+Folder=
 Compile=1
 Link=1
 Priority=1000

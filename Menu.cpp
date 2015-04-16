@@ -1,7 +1,7 @@
 #include "Menu.h"
 
 BEGIN_EVENT_TABLE(Menu, wxMenuBar)
-    EVT_MENU(ID_HELLO, Menu::OnHello)
+    EVT_MENU(ID_NOVO, Menu::OnNovo)
     EVT_MENU(wxID_EXIT, Menu::OnExit)
     EVT_MENU(wxID_ABOUT, Menu::OnAbout)
 END_EVENT_TABLE()
@@ -10,9 +10,9 @@ Menu::Menu()
         :wxMenuBar(){
                   
     FileMenu = new wxMenu();
-	FileMenu->Append(ID_HELLO, "&Hello", "Hello");
+	FileMenu->Append(ID_NOVO, "&Novo", "Novo");
 	FileMenu->AppendSeparator();
-	FileMenu->Append(wxID_EXIT, "&Exit", "Sair");
+	FileMenu->Append(wxID_EXIT, "&Sair", "Sair");
 	this->Append(FileMenu, "&File");
 	
 	// Menu Ferramentas // colocar na tabela de eventos e criar metodo de tratamento
@@ -29,7 +29,7 @@ Menu::Menu()
 }    
     
 
-void Menu::OnHello(wxCommandEvent& event)
+void Menu::OnNovo(wxCommandEvent& event)
 {
     wxLogMessage("Hello world from wxWidgets!");
 }
