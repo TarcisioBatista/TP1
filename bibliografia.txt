@@ -3,3 +3,5 @@ http://zetcode.com/gui/wxwidgets/menustoolbars/
 git-scm.com/
 github.com/
 http://rogerdudler.github.io/git-guide/index.pt_BR.html
+http://docs.wxwidgets.org/trunk/overview_sizer.html#overview_sizer_box
+https://wiki.wxwidgets.org/Drawing_on_a_panel_with_a_DC

@@ -1,4 +1,5 @@
 #include <wx/wx.h>
+#include <wx/colour.h>
 #include "Menu.h"
 #include "PanelMenu.h"
 #include "PanelCores.h"
@@ -11,4 +12,5 @@ class MyFrame: public wxFrame
         Menu *MenuBar;
         PanelMenu *Panel1;
         PanelCores *Panel3;
+        wxColour *COR;    
 };
