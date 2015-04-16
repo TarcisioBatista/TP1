@@ -3,11 +3,11 @@
 
 BEGIN_EVENT_TABLE(PanelMenu, wxPanel)
 
-    EVT_BUTTON(ID_CHANGEBACKG, PanelMenu::OnChangeBackGround)
-    EVT_BUTTON(ID_TRACELINES, PanelMenu::OnTraceLines)
-    EVT_BUTTON(ID_TRACELINESCLICKS, PanelMenu::OnTraceLinesOnClicks)
-    EVT_BUTTON(ID_PENCIL, PanelMenu::OnPencil)
-    EVT_BUTTON(ID_LARGURA, PanelMenu::OnLargura)
+    //EVT_BUTTON(ID_CHANGEBACKG, PanelMenu::OnChangeBackGround)
+    //EVT_BUTTON(ID_TRACELINES, PanelMenu::OnTraceLines)
+    //EVT_BUTTON(ID_TRACELINESCLICKS, PanelMenu::OnTraceLinesOnClicks)
+    //EVT_BUTTON(ID_PENCIL, PanelMenu::OnPencil)
+    //EVT_BUTTON(ID_LARGURA, PanelMenu::OnLargura)
     
 END_EVENT_TABLE()
 
@@ -19,6 +19,11 @@ PanelMenu::PanelMenu(wxWindow *pai):
         TracalinhaInClicks = new wxButton(this, ID_TRACELINESCLICKS, wxT("Tracar Retas \nem cliques"), wxPoint(0,80), wxSize(100,40));
         Pencil = new wxButton(this, ID_PENCIL, wxT("Pincel"), wxPoint(0,120), wxSize(100,40));
         Largura = new wxButton(this, ID_LARGURA, wxT("Largura"), wxPoint(0,160), wxSize(100,40));
+        
+        Connect(ID_CHANGEBACKG, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(PanelMenu::OnChangeBackGround));
+        Connect(ID_TRACELINES, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(PanelMenu::OnTraceLines));
+        Connect(ID_TRACELINESCLICKS, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(PanelMenu::OnTraceLinesOnClicks));
+        Connect(ID_PENCIL, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(PanelMenu::OnPencil));
 }
     
 void PanelMenu::OnChangeBackGround(wxCommandEvent& event) {

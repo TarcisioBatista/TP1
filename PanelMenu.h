@@ -23,10 +23,8 @@ class PanelMenu: public wxPanel{
     DECLARE_EVENT_TABLE();
 };
 
-enum {
-        ID_CHANGEBACKG,
-        ID_TRACELINES,
-        ID_TRACELINESCLICKS,
-        ID_PENCIL,
-        ID_LARGURA
-};
+const int       ID_CHANGEBACKG = 101;
+const int       ID_TRACELINES= 102;
+const int       ID_TRACELINESCLICKS= 103;
+const int       ID_PENCIL= 104;
+const int       ID_LARGURA= 105;
