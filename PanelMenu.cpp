@@ -12,7 +12,7 @@ BEGIN_EVENT_TABLE(PanelMenu, wxPanel)
 END_EVENT_TABLE()
 
 PanelMenu::PanelMenu(wxWindow *pai):
-    wxPanel (pai, 0, wxPoint(-1,-1), wxSize(-1,-1)) {
+    wxPanel (pai, 0, wxPoint(-1,-1), wxSize(100,220)) {
         
         MudaFundo = new wxButton(this, ID_CHANGEBACKG, wxT("Mudar Cor \n do Fundo"), wxPoint(0,0), wxSize(100,40));
         TracaLinhas = new wxButton(this, ID_TRACELINES, wxT("Tracar Retas"), wxPoint(0,40), wxSize(100,40));
@@ -20,6 +20,7 @@ PanelMenu::PanelMenu(wxWindow *pai):
         Pencil = new wxButton(this, ID_PENCIL, wxT("Pincel"), wxPoint(0,120), wxSize(100,40));
         Largura = new wxButton(this, ID_LARGURA, wxT("Largura"), wxPoint(0,160), wxSize(100,40));
         
+        //conectando os boteos a seus tratadores..
         Connect(ID_CHANGEBACKG, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(PanelMenu::OnChangeBackGround));
         Connect(ID_TRACELINES, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(PanelMenu::OnTraceLines));
         Connect(ID_TRACELINESCLICKS, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(PanelMenu::OnTraceLinesOnClicks));
@@ -27,10 +28,10 @@ PanelMenu::PanelMenu(wxWindow *pai):
 }
     
 void PanelMenu::OnChangeBackGround(wxCommandEvent& event) {
-    Close( true );
+     wxMessageBox( "FUNCIONANDO!!",
+            "sobre", wxOK | wxICON_INFORMATION );
 }
 void PanelMenu::OnTraceLines(wxCommandEvent& event) {
-    Close (true);
 }
 void PanelMenu::OnTraceLinesOnClicks(wxCommandEvent& event){
 }

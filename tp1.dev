@@ -167,9 +167,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit9]
-FileName=PanelCores.h
+FileName=PanelCores.cpp
 CompileCpp=1
-Folder=
+Folder=tp1
 Compile=1
 Link=1
 Priority=1000
@@ -177,9 +177,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit10]
-FileName=PanelCores.cpp
+FileName=PanelCores.h
 CompileCpp=1
-Folder=
+Folder=tp1
 Compile=1
 Link=1
 Priority=1000

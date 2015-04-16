@@ -1,6 +1,7 @@
 #include <wx/wx.h>
 #include "Menu.h"
 #include "PanelMenu.h"
+#include "PanelCores.h"
 
 class MyFrame: public wxFrame
 {
@@ -9,4 +10,5 @@ class MyFrame: public wxFrame
     private:
         Menu *MenuBar;
         PanelMenu *Panel1;
+        PanelCores *Panel3;
 };

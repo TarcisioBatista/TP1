@@ -1,19 +1,6 @@
-#include <wx/wx.h>
+#include "PanelCores.h"
 
-class PanelCores: public wxMenuBar{
+PanelCores::PanelCores(wxWindow *pai):
+    wxPanel (pai, 0, wxPoint(-1,-1), wxSize(-1,50), wxSUNKEN_BORDER) {
 
-    public:
-        
-        PanelCores();
-        void OnHello(wxCommandEvent& event);
-        void OnExit(wxCommandEvent& event);
-        void OnAbout(wxCommandEvent& event);
-        
-    private:
-        
-        wxMenu *FileMenu;
-        wxMenu *InfoMenu;
-        wxMenu *ToolsMenu;
-        
-    DECLARE_EVENT_TABLE();
-};
+}
