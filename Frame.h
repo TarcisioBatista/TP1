@@ -11,6 +11,5 @@ class MyFrame: public wxFrame
     private:
         Menu *MenuBar;
         PanelMenu *Panel1;
-        PanelCores *Panel3;
-        wxColour *COR;    
+        PanelCores *Panel3;    
 };

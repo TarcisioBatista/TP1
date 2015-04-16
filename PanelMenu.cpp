@@ -1,16 +1,6 @@
 #include "PanelMenu.h"
 
 
-BEGIN_EVENT_TABLE(PanelMenu, wxPanel)
-
-    //EVT_BUTTON(ID_CHANGEBACKG, PanelMenu::OnChangeBackGround)
-    //EVT_BUTTON(ID_TRACELINES, PanelMenu::OnTraceLines)
-    //EVT_BUTTON(ID_TRACELINESCLICKS, PanelMenu::OnTraceLinesOnClicks)
-    //EVT_BUTTON(ID_PENCIL, PanelMenu::OnPencil)
-    //EVT_BUTTON(ID_LARGURA, PanelMenu::OnLargura)
-    
-END_EVENT_TABLE()
-
 PanelMenu::PanelMenu(wxWindow *pai):
     wxPanel (pai, 0, wxPoint(-1,-1), wxSize(100,220)) {
         

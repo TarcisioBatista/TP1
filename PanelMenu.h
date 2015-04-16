@@ -20,7 +20,6 @@ class PanelMenu: public wxPanel{
         wxButton *Pencil;
         wxButton *Largura;
         
-    DECLARE_EVENT_TABLE();
 };
 
 const int       ID_CHANGEBACKG = 101;
