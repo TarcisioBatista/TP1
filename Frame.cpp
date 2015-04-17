@@ -5,11 +5,13 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
         : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
     
-    // resolvendo os paineis
+    // criando os paineis
     wxPanel *Parent = new wxPanel(this, wxID_ANY);
     Panel1 = new PanelMenu(Parent);
     Panel3 = new PanelCores(Parent);
     Panel2 = new DrawPanel(Parent);
+    
+    // adicionando o sizer
     wxBoxSizer *vbox = new wxBoxSizer(wxVERTICAL);
     wxBoxSizer *hbox = new wxBoxSizer(wxHORIZONTAL);
     hbox->Add(Panel1, 0, wxEXPAND | wxRIGHT , 5);

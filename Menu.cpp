@@ -1,5 +1,6 @@
 #include "Menu.h"
 
+
 BEGIN_EVENT_TABLE(Menu, wxMenuBar)
     EVT_MENU(ID_NOVO, Menu::OnNovo)
     EVT_MENU(wxID_EXIT, Menu::OnExit)
@@ -8,7 +9,7 @@ END_EVENT_TABLE()
    
 Menu::Menu()
         :wxMenuBar(){
-                  
+                
     FileMenu = new wxMenu();
 	FileMenu->Append(ID_NOVO, "&Novo", "Novo");
 	FileMenu->AppendSeparator();
@@ -31,7 +32,6 @@ Menu::Menu()
 
 void Menu::OnNovo(wxCommandEvent& event)
 {
-    wxLogMessage("Hello world from wxWidgets!");
 }
 void Menu::OnExit(wxCommandEvent& event)
 {

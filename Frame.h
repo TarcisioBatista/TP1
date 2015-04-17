@@ -5,6 +5,7 @@
 #include "PanelCores.h"
 #include "DrawPanel.h"
 
+
 class MyFrame: public wxFrame
 {
     public:

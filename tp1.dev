@@ -1,7 +1,7 @@
 [Project]
 FileName=tp1.dev
 Name=tp1
-UnitCount=10
+UnitCount=12
 PchHead=-1
 PchSource=-1
 Ver=3
@@ -187,9 +187,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit11]
-FileName=DrawPanel.h
+FileName=DrawPanel.cpp
 CompileCpp=1
-Folder=
+Folder=tp1
 Compile=1
 Link=1
 Priority=1000
@@ -197,9 +197,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit12]
-FileName=DrawPanel.cpp
+FileName=DrawPanel.h
 CompileCpp=1
-Folder=
+Folder=tp1
 Compile=1
 Link=1
 Priority=1000
