@@ -1,15 +1,14 @@
 #include "Frame.h"
 
-
 MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
         : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
     
     // criando os paineis
-    wxPanel *Parent = new wxPanel(this, wxID_ANY);
-    Panel1 = new PanelMenu(Parent);
-    Panel3 = new PanelCores(Parent);
-    Panel2 = new DrawPanel(Parent);
+    //wxPanel *Parent = new wxPanel(this, wxID_ANY);
+    Panel1 = new PanelMenu(this);
+    Panel3 = new PanelCores(this);
+    Panel2 = new DrawPanel(this);
     
     // adicionando o sizer
     wxBoxSizer *vbox = new wxBoxSizer(wxVERTICAL);
@@ -18,7 +17,7 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
     hbox->Add(Panel2, 1, wxEXPAND | wxRIGHT , 5);
     vbox->Add(hbox, 1, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, 5);
     vbox->Add(Panel3, 0, wxEXPAND | wxLEFT | wxRIGHT | wxTOP, 5);
-    Parent->SetSizer(vbox);
+    this->SetSizer(vbox);
     
     // menu e barra de status
     MenuBar = new Menu();

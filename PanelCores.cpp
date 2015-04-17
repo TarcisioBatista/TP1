@@ -4,7 +4,10 @@
 PanelCores::PanelCores(wxWindow *pai):
     wxPanel (pai, 0, wxPoint(-1,-1), wxSize(-1,50), wxSUNKEN_BORDER) {
         
+        Parent = new wxWindow(wxID_ANY);
+        Parent = this->GetParent();
         
+        //criando butoes manualmente mudar isso aqui
         branco = new wxButton(this, ID_Branco, wxT(""), wxPoint(0,0), wxSize(40,20));
         branco->SetBackgroundColour(wxColour(255,255,255));
         preto  = new wxButton(this, ID_Preto, wxT(""), wxPoint(0,25), wxSize(40,20));
@@ -14,6 +17,8 @@ PanelCores::PanelCores(wxWindow *pai):
         azul = new wxButton(this, ID_Azul, wxT(""), wxPoint(45,25), wxSize(40,20));
         azul->SetBackgroundColour(wxColour(0,0,255));
         
+        
+        //conectando os butoes aos handlers
         Connect(ID_Branco, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(PanelCores::SetBranco));
         Connect(ID_Preto, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(PanelCores::SetPreto));
         Connect(ID_Vermelho, wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(PanelCores::SetVermelho));
@@ -21,14 +26,14 @@ PanelCores::PanelCores(wxWindow *pai):
 }
 
 void PanelCores::SetBranco(wxCommandEvent& event){
-    COR = wxColor(255,255,255);
+    Parent->Cor = wxColor(255,255,255);
 };
 void PanelCores::SetPreto(wxCommandEvent& event){
-    COR = wxColor(0,0,0);
+    Parent->COR = wxColor(0,0,0);
 };
 void PanelCores::SetAzul(wxCommandEvent& event){
-    COR = wxColor(0,0,255);
+    Parent->COR = wxColor(0,0,255);
 };
 void PanelCores::SetVermelho(wxCommandEvent& event){
-    COR = wxColor(255,0,0);
+    Parent->COR = wxColor(255,0,0);
 };

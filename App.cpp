@@ -3,8 +3,6 @@
 
 //declarando variaveis globais no primeiro arquivo cpp a ser compilado
 //simulando o que a main faria.
-int ferramenta;
-wxColour *Cor;
 
 IMPLEMENT_APP(MyApp);
 

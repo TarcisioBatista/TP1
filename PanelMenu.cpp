@@ -1,6 +1,4 @@
 #include "PanelMenu.h"
-extern int ferramenta;
-int Largura = 0;
 
 PanelMenu::PanelMenu(wxWindow *pai):
     wxPanel (pai, 0, wxPoint(-1,-1), wxSize(100,300)) {
@@ -19,16 +17,16 @@ PanelMenu::PanelMenu(wxWindow *pai):
 }
     
 void PanelMenu::OnChangeBackGround(wxCommandEvent& event) {
-    ferramenta = ID_CHANGEBACKG;
+    //ferramenta = ID_CHANGEBACKG;
 }
 void PanelMenu::OnTraceLines(wxCommandEvent& event) {
-    ferramenta = ID_TRACELINES;
+    //ferramenta = ID_TRACELINES;
 }
 void PanelMenu::OnTraceLinesOnClicks(wxCommandEvent& event){
-    ferramenta = ID_TRACELINESCLICKS;
+    //ferramenta = ID_TRACELINESCLICKS;
 }
 void PanelMenu::OnPencil(wxCommandEvent& event){
-    ferramenta = ID_PENCIL;
+    //ferramenta = ID_PENCIL;
 }
 void PanelMenu::OnLargura(wxCommandEvent& event){
 

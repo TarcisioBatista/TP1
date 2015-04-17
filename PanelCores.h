@@ -12,11 +12,11 @@ class PanelCores: public wxPanel{
         void SetVermelho(wxCommandEvent& event);
         
     private:
+        wxWindow *Parent;
         wxButton *azul;
         wxButton *vermelho;
         wxButton *preto;
         wxButton *branco;
-        wxColour COR;
     
 };
 

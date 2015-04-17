@@ -15,5 +15,5 @@ class DrawPanel: public wxPanel{
         void OnLeftReleased(wxMouseEvent& event);
         void OnLeftClick(wxMouseEvent& event);
 
-    DECLARE_EVENT_TABLE();
+    //DECLARE_EVENT_TABLE();
 };

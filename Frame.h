@@ -10,6 +10,8 @@ class MyFrame: public wxFrame
 {
     public:
         MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size);
+        int ferramenta, larg;
+        wxColour *Cor;
     private:
         Menu *MenuBar;
         PanelMenu *Panel1;
