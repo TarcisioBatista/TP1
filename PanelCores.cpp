@@ -4,8 +4,8 @@
 PanelCores::PanelCores(wxWindow *pai):
     wxPanel (pai, 0, wxPoint(-1,-1), wxSize(-1,50), wxSUNKEN_BORDER) {
         
-        Parent = new wxWindow(wxID_ANY);
-        Parent = this->GetParent();
+        wxWindow *Parent = this->GetParent();
+        Parent->ferramenta = 1;
         
         //criando butoes manualmente mudar isso aqui
         branco = new wxButton(this, ID_Branco, wxT(""), wxPoint(0,0), wxSize(40,20));
@@ -26,14 +26,14 @@ PanelCores::PanelCores(wxWindow *pai):
 }
 
 void PanelCores::SetBranco(wxCommandEvent& event){
-    Parent->Cor = wxColor(255,255,255);
+    //Parent->Cor = wxColor(255,255,255);
 };
 void PanelCores::SetPreto(wxCommandEvent& event){
-    Parent->COR = wxColor(0,0,0);
+    //Parent->COR = wxColor(0,0,0);
 };
 void PanelCores::SetAzul(wxCommandEvent& event){
-    Parent->COR = wxColor(0,0,255);
+    //Parent->COR = wxColor(0,0,255);
 };
 void PanelCores::SetVermelho(wxCommandEvent& event){
-    Parent->COR = wxColor(255,0,0);
+    //Parent->COR = wxColor(255,0,0);
 };

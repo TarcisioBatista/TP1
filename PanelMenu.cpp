@@ -3,6 +3,8 @@
 PanelMenu::PanelMenu(wxWindow *pai):
     wxPanel (pai, 0, wxPoint(-1,-1), wxSize(100,300)) {
         
+        
+        
         MudaFundo = new wxButton(this, ID_CHANGEBACKG, wxT("Mudar Cor \n do Fundo"), wxPoint(0,0), wxSize(100,40));
         TracaLinhas = new wxButton(this, ID_TRACELINES, wxT("Tracar Retas"), wxPoint(0,40), wxSize(100,40));
         TracalinhaInClicks = new wxButton(this, ID_TRACELINESCLICKS, wxT("Tracar Retas \nem cliques"), wxPoint(0,80), wxSize(100,40));

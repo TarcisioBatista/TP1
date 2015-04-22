@@ -10,10 +10,16 @@ class DrawPanel: public wxPanel{
         void paintNow();
         void render(wxDC& dc);
         
-        void OnMouseMoved(wxMouseEvent& event);
+        //tratamento de eventos do mouse
         void OnLeftDown(wxMouseEvent& event);
-        void OnLeftReleased(wxMouseEvent& event);
-        void OnLeftClick(wxMouseEvent& event);
+        void OnLeftUp(wxMouseEvent& event);
+        void OnMouseMoved(wxMouseEvent& event);
+        void OnLeftClicked(wxMouseEvent& event);
 
-    //DECLARE_EVENT_TABLE();
+//    DECLARE_EVENT_TABLE();
 };
+
+const int       CHANGEBACKG = 101;
+const int       TRACELINES= 102;
+const int       TRACELINESCLICKS= 103;
+const int       PENCIL= 104;

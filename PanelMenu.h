@@ -25,5 +25,5 @@ class PanelMenu: public wxPanel{
 const int       ID_CHANGEBACKG = 101;
 const int       ID_TRACELINES= 102;
 const int       ID_TRACELINESCLICKS= 103;
-const int       ID_PENCIL= 104;
-const int       ID_LARGURA= 105;
+const int       ID_PENCIL = 104;
+const int       ID_LARGURA = 105;
