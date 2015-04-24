@@ -15,7 +15,6 @@ class Menu: public wxMenuBar{
     DECLARE_EVENT_TABLE();
 };
 
-enum
-{
-    ID_NOVO = 1
-};
+
+const int ID_NOVO = 1;
+

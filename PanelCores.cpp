@@ -1,11 +1,12 @@
 #include "PanelCores.h"
+//#include "Frame.h"
 
 
 PanelCores::PanelCores(wxWindow *pai):
     wxPanel (pai, 0, wxPoint(-1,-1), wxSize(-1,50), wxSUNKEN_BORDER) {
         
-        wxWindow *Parent = this->GetParent();
-        Parent->ferramenta = 1;
+//        MyFrame *Parent = this->GetParent();
+//        Parent->ferramenta = 1;
         
         //criando butoes manualmente mudar isso aqui
         branco = new wxButton(this, ID_Branco, wxT(""), wxPoint(0,0), wxSize(40,20));

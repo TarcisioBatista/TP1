@@ -31,5 +31,4 @@ void PanelMenu::OnPencil(wxCommandEvent& event){
     //ferramenta = ID_PENCIL;
 }
 void PanelMenu::OnLargura(wxCommandEvent& event){
-
 }
