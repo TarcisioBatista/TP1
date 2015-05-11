@@ -1,26 +1,18 @@
 #include <wx/wx.h>
-#include <wx/panel.h>
-
+#include <vector>
 
 class PanelCores: public wxPanel{  
     
     public:
         PanelCores(wxWindow *pai);
-        void SetBranco(wxCommandEvent& event);
-        void SetPreto(wxCommandEvent& event);
-        void SetAzul(wxCommandEvent& event);
-        void SetVermelho(wxCommandEvent& event);
+
+        void OnPaint(wxPaintEvent& event);
+        void OnClick(wxMouseEvent& event);
+        
+        DECLARE_EVENT_TABLE();
         
     private:
-        wxButton *azul;
-        wxButton *vermelho;
-        wxButton *preto;
-        wxButton *branco;
+        std::vector<wxColour> cores;
     
 };
-
-const int       ID_Branco = 255;
-const int       ID_Preto = 256;
-const int       ID_Azul = 254;
-const int       ID_Vermelho = 253;
 

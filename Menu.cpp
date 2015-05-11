@@ -1,5 +1,6 @@
 #include "Menu.h"
-
+#include "DrawPanel.h"
+#include "Frame.h"
 
 BEGIN_EVENT_TABLE(Menu, wxMenuBar)
     EVT_MENU(ID_NOVO, Menu::OnNovo)
@@ -29,9 +30,13 @@ Menu::Menu()
         
 }    
     
-
-void Menu::OnNovo(wxCommandEvent& event)
-{
+// nesse metodo para limpar a tela é criado um novo painel
+// com dimenções eneormes e fundo branco
+// em seguida ele é destruido mas o fundo do painel anterior continua branco
+void Menu::OnNovo(wxCommandEvent& event){
+    wxPanel *novo = new wxPanel(this,0 , wxPoint(-1,-1),wxSize(100000,100000));
+    novo->SetBackgroundColour(wxColour(255,255,255));
+    delete novo;    
 }
 void Menu::OnExit(wxCommandEvent& event)
 {
